@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-7">
+    <!-- Logout Button -->
+    <div class="d-flex justify-content-end">
+        <a href="{{ url_for('logout') }}" class="btn btn-secondary mb-3">Logout</a>
+    </div>
+    <h2 class="mb-7">Update Record: {{ record['Project Name'] }}</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="unit">Unit</label>
+            <input type="text" class="form-control" id="unit" name="unit" value="{{ record['Unit'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="mine">Mine</label>
+            <input type="text" class="form-control" id="mine" name="mine" value="{{ record['Mine'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="work_awarded_to">Contractor</label>
+            <input type="text" class="form-control" id="work_awarded_to" name="work_awarded_to" value="{{ record['Contractor'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="loi_date">LoI/Work Awarded Date</label>
+            <input type="date" class="form-control" id="loi_date" name="loi_date" value="{{ record['LoI/Work awarded Date'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="work_commencement_date">Work Commencement Date</label>
+            <input type="date" class="form-control" id="work_commencement_date" name="work_commencement_date" value="{{ record['Work Commencement Date'] }}" required>
+        </div>
+        <!-- Add other fields similarly -->
+        <div class="form-group">
+            <label for="mob_period">Mobilisation Period</label>
+            <input type="text" class="form-control" id="mob_period" name="mob_period" value="{{ record['Mobilisation Period'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="tar_completion">Target Completion date</label>
+            <input type="date" class="form-control" id="tar_completion" name="tar_completion" value="{{ record['Target Completion date'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="tot_drilling">Total Drilling Quantity  (in m)</label>
+            <input type="text" class="form-control" id="tot_drilling" name="tot_drilling" value="{{ record['Total Drilling Quantity  (in m)'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="tot_capex_amt">Total CAPEX Amount  as per tender (Rs in Lakh)</label>
+            <input type="text" class="form-control" id="tot_capex_amt" name="tot_capex_amt" value="{{ record['Total CAPEX Amount  as per tender (Rs in Lakh)'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phy_work_done">Physical Work Target in the month</label>
+            <input type="text" class="form-control" id="phy_work_done" name="phy_work_done" value="{{ record['Physical Work Target in the month'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phy_work_upto_done">Physical Work Done in the month</label>
+            <input type="text" class="form-control" id="phy_work_upto_done" name="phy_work_upto_done" value="{{ record['Physical Work Done in the month'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phy_work_inc_done">Physical Work Target upto the month for FY</label>
+            <input type="text" class="form-control" id="phy_work_inc_done" name="phy_work_inc_done" value="{{ record['Physical Work Target upto the month for FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phy_work_done_fy">Physical Work Done upto the month for FY</label>
+            <input type="text" class="form-control" id="phy_work_done_fy" name="phy_work_done_fy" value="{{ record['Physical Work Done upto the month for FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phy_work_from_inc">Physical Work Target upto the month from inception</label>
+            <input type="text" class="form-control" id="phy_work_from_inc" name="phy_work_from_inc" value="{{ record['Physical Work Target upto the month from inception'] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phy_work_done_inc">Physical Work Done up to the month from inception</label>
+            <input type="text" class="form-control" id="phy_work_done_inc" name="phy_work_done_inc" value="{{ record['Physical Work Done up to the month from inception'] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="drill_tar">Drilling Target for the month</label>
+            <input type="text" class="form-control" id="drill_tar" name="drill_tar" value="{{ record['Drilling Target for the month'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="ac_drill_tar">Achieved Drilling Meterage in the month</label>
+            <input type="text" class="form-control" id="ac_drill_tar" name="ac_drill_tar" value="{{ record['Achieved Drilling Meterage in the month'] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dril_tar_mon">Drilling Target upto the month for FY</label>
+            <input type="text" class="form-control" id="dril_tar_mon" name="dril_tar_mon" value="{{ record['Drilling Target upto the month for FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="ac_drill_met">Achieved Drilling Meterage up to the month for FY</label>
+            <input type="text" class="form-control" id="ac_drill_met" name="ac_drill_met" value="{{ record['Achieved Drilling Meterage up to the month for FY'] }}" required>
+        </div>
+
+         <div class="form-group">
+            <label for="ac_drill_tar_inc">Drilling Target upto the month from inception</label>
+            <input type="text" class="form-control" id="ac_drill_tar_inc" name="ac_drill_tar_inc" value="{{ record['Drilling Target upto the month from inception'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="ac_drill_tar_mon">Achieved Drilling Meterage up to the month from inception</label>
+            <input type="text" class="form-control" id="ac_drill_tar_mon" name="ac_drill_tar_mon" value="{{ record['Achieved Drilling Meterage up to the month from inception'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="bill_raised_contract">Bills raised by Contractor in the month</label>
+            <input type="text" class="form-control" id="bill_raised_contract" name="bill_raised_contract" value="{{ record['Bills raised by Contractor in the month'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="bill_raised_contract_FY">Bills raised by Contractor up to the month in FY</label>
+            <input type="text" class="form-control" id="bill_raised_contract_FY" name="bill_raised_contract_FY" value="{{ record['Bills raised by Contractor up to the month in FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="bill_raised_contract_inc">Bills rised by Contractor upto the month from inception</label>
+            <input type="text" class="form-control" id="bill_raised_contract_inc" name="bill_raised_contract_inc" value="{{ record['Bills rised by Contractor upto the month from inception'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="pay_made">Payments made to Contractor in the month</label>
+            <input type="text" class="form-control" id="pay_made" name="pay_made" value="{{ record['Payments made to Contractor in the month'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="pay_made_FY">Payments made to Contractor up to the month in FY</label>
+            <input type="text" class="form-control" id="pay_made_FY" name="pay_made_FY" value="{{ record['Payments made to Contractor up to the month in FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="pay_made_INC">Payments made to Contractor upto the month from inception</label>
+            <input type="text" class="form-control" id="pay_made_INC" name="pay_made_INC" value="{{ record['Payments made to Contractor upto the month from inception'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="Tar_CAPEX">Target CAPEX Amount for FY</label>
+            <input type="text" class="form-control" id="Tar_CAPEX" name="Tar_CAPEX" value="{{ record['Target CAPEX Amount for FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="achiev_CAPEX">Achieved CAPEX Amount for FY</label>
+            <input type="text" class="form-control" id="achiev_CAPEX" name="achiev_CAPEX" value="{{ record['Achieved CAPEX Amount for FY'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="target_CAPEX_FY">Target CAPEX Amount for FY and so on</label>
+            <input type="text" class="form-control" id="target_CAPEX_FY" name="target_CAPEX_FY" value="{{ record['Target CAPEX Amount for FY and so on'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="achieve_CAPEX_FY">Achieved CAPEX Amount for FY and so on</label>
+            <input type="text" class="form-control" id="achieve_CAPEX_FY" name="achieve_CAPEX_FY" value="{{ record['Achieved CAPEX Amount for FY and so on'] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="present_status">Present Status</label>
+            <input type="text" class="form-control" id="present_status" name="present_status" value="{{ record['Present Status'] }}" required>
+        </div>
+
+        <div class="form-group">
+            <!--<label for="unit">Unit</label>-->
+            <label for="dril_type">Drilling Type:</label>
+            <select name="dril_type" id="dril_type">
+                <option value="Surface Drilling">Surface Drilling</option>
+                <option value="Under Ground Drilling">Under Ground Drilling</option>
+            </select>
+           <!-- <input type="text" class="form-control" id="unit" name="unit" required>>-->
+        </div>
+
+        <div class="form-group">
+            <label for="Total_dril">Total Drilling Quantity  (in m)Target</label>
+            <input type="text" class="form-control" id="Total_dril" name="Total_dril" value="{{ record['Total Drilling Quantity  (in m)Target'] }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Record</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-7">
+    <h2 class="mb-7">Please Choose an Option</h2>
+    <!-- Link to Create New Record -->
+    <a href="{{ url_for('create') }}" class="btn btn-success btn-lg">Create New Record</a>
+    <!-- Link to View and Update Existing Records -->
+    <a href="{{ url_for('view_records') }}" class="btn btn-primary btn-lg">Update Existing Record</a>
+</div>
+</body>
+</html>

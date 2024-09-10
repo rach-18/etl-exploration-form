@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Records</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-6">
+    <!-- Logout Button -->
+    <div class="d-flex justify-content-end">
+        <a href="{{ url_for('logout') }}" class="btn btn-secondary mb-3">Logout</a>
+    </div>
+
+    <h2 class="mb-6">Add New Record</h2>
+    <form method="POST">
+        <!-- Unit Dropdown with Unit Codes -->
+        <div class="form-group">
+            <label for="unit">Select Unit:</label>
+            <select name="unit" id="unit" class="form-control">
+                <option value="ICC">ICC</option>
+                <option value="KCC">KCC</option>
+                <option value="MCP">MCP</option>
+            </select>
+        </div>
+
+        <!-- Branch Dropdown (Mine) -->
+        <div class="form-group">
+            <label for="mine">Select Mines:</label>
+            <select name="mine" id="mine" class="form-control">
+                <!-- ICC Branches -->
+                <optgroup label="ICC">
+                    <option value="Surda">Surda</option>
+                    <option value="Kendadih">Kendadih</option>
+                    <option value="Rakha">Rakha</option>
+                </optgroup>
+                <!-- KCC Branches -->
+                <optgroup label="KCC">
+                    <option value="Khetri">Khetri</option>
+                    <option value="Kolihan">Kolihan</option>
+                    <option value="Banwas">Banwas</option>
+                </optgroup>
+                <!-- MCP Branches -->
+                <optgroup label="MCP">
+                    <option value="Malanjkhand">Malanjkhand</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="project_name">Project Name</label>
+            <input type="text" class="form-control" id="project_name" name="project_name" required>
+        </div>
+        <div class="form-group">
+            <label for="work_awarded_to">Contractor</label>
+            <input type="text" class="form-control" id="work_awarded_to" name="work_awarded_to" required>
+        </div>
+        <div class="form-group">
+            <label for="loi_date">LoI/Work Awarded Date</label>
+            <input type="date" class="form-control" id="loi_date" name="loi_date" required>
+        </div>
+        <div class="form-group">
+            <label for="work_commencement_date">Work Commencement Date</label>
+            <input type="date" class="form-control" id="work_commencement_date" name="work_commencement_date" required>
+        </div>
+        <div class="form-group">
+            <label for="present_status">Present Status</label>
+            <input type="text" class="form-control" id="present_status" name="present_status" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Record</button>
+    </form>
+
+    <hr>
+    <h2 class="mb-4">Existing Records</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Unit</th>
+            <th>Mine</th>
+            <th>Project Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for record in records %}
+            <tr>
+                <td>{{ record['Unit'] }}</td>
+                <td>{{ record['Mine'] }}</td>
+                <td>{{ record['Project Name'] }}</td>
+                <td>
+                    <a href="{{ url_for('update', project_name=record['Project Name']) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="{{ url_for('delete', project_name=record['Project Name']) }}" method="post" style="display:inline-block;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
