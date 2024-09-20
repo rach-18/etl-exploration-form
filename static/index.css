@@ -1,0 +1,70 @@
+  .signUpFormContainer_ {
+    text-align: center;
+    position: relative;
+    background: white;
+    width: 23rem;
+    height: fit-content;
+    border-radius: 1rem;
+    margin: auto;
+    padding-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+
+  .signUpFormContainer_
+    > .signUpForm_
+    input:not(input[type="submit"]):not(input[type="button"]),
+  .signUpFormContainer_ > .signUpForm_ select {
+    margin-bottom: 2em;
+    padding: 16px 20px;
+    width: 16em;
+    outline: none;
+    border: 0.5px solid lightgrey;
+    border-bottom: 2px solid #00000096;
+    font-size: 16px;
+  }
+
+  .signUpFormContainer_ > .signUpForm_ input[type="submit"],
+  .signUpFormContainer_ > .signUpForm_ input[type="button"] {
+    width: 7.5em;
+    outline: none;
+    border: none;
+    padding: 14px 11px;
+    border-radius: 16px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+    scale: 0.9;
+  }
+
+  .signUpFormContainer_ > .signUpForm_ input[type="submit"]:hover,
+  .signUpFormContainer_ > .signUpForm_ input[type="button"]:hover {
+    scale: 1;
+  }
+
+  .signUpFormContainer_ h2,
+  .welcomeScreen_ > .label {
+    margin-bottom: 1.8em;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .logoContainer_ {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 10px 17px;
+  }
+
+  .etlLogo_ img {
+    width: 53px;
+    height: 66px;
+    object-fit: contain;
+    background: white;
+    border-radius: 16%;
+}

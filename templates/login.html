@@ -4,25 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+    <style>
+      .background_ {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("{{ url_for('static', filename='miningImg.jpg') }}") center center / cover no-repeat;
+        filter: blur(5px);
+        z-index: -1;
+      }
+    </style>
 </head>
 <body>
+  <div class="background_"></div>
+    <div class="logoContainer_ cursor-pointer">
+      <div class="etlLogo_ m-auto" style="height: 60px;">
+        <img src="{{ url_for('static', filename='etlLogo.svg') }}" alt="etl" />
+      </div>
+    </div>
     <h2>Login</h2>
-    <form method="POST" action="{{ url_for('login') }}">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Login</button>
+    <div class="signUpFormContainer_">
+      <form class="signUpForm_" method="POST" action="{{ url_for('login') }}">
+        <h2>Login</h2>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username..."
+        />
+        <br />
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password..."
+        />
+        <br />
+        <input
+            type="submit"
+            value="sign in"
+        />
     </form>
-
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         <ul>
           {% for category, message in messages %}
-            <li class="{{ category }}">{{ message }}</li>
+            <li class="{{ category }}" style="list-style-type: none;">{{ message }}</li>
           {% endfor %}
         </ul>
       {% endif %}
     {% endwith %}
+    </div>
 </body>
 </html>
