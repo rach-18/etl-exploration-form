@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 import pandas as pd
 from datetime import datetime
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
+CORS(app)
 
 # File path for the Excel file
 file_path = 'records.xlsx'
@@ -70,52 +72,96 @@ def save_data(df):
 
 
 # Route for the login page
-@app.route('/login', methods=['GET', 'POST'])
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         password = request.form['password']
+
+#         if username == USERNAME and password == PASSWORD:
+#             session['logged_in'] = True
+#             return redirect(url_for('index'))
+#         else:
+#             flash('Invalid credentials, please try again.', 'danger')
+#     return render_template('login.html')
+@app.route('/login', methods = ['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
 
-        if username == USERNAME and password == PASSWORD:
-            session['logged_in'] = True
-            return redirect(url_for('index'))
-        else:
-            flash('Invalid credentials, please try again.', 'danger')
-    return render_template('login.html')
-
+    if username == USERNAME and password == PASSWORD:
+        session['logged_in'] = True
+        return jsonify({"success": True, "message": "Login successful!"}), 200
+    else:
+        return jsonify({"success": False, "message": "Invalid credentials, please try again."}), 401
 
 # Route for displaying the form and list of records
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if not session.get('logged_in'):
-        return redirect(url_for('login'))
+        return jsonify({'message': 'Unauthorized'}), 401
 
-    df = load_data()
-    if request.method == 'POST':
-        try:
-            new_record = {
-                'Unit': request.form['unit'],
-                'Mine': request.form['mine'],
-                'Project Name': request.form['project_name'],
-                'Contractor': request.form['work_awarded_to'],
-                'LoI/Work awarded Date': request.form['loi_date'],
-                'Work Commencement Date': request.form['work_commencement_date'],
-                'Present Status': request.form['present_status'],
-                'Username': USERNAME,  # Capturing the username from session
-                'Date': datetime.now().strftime("%Y-%m-%d")  # Capturing the current date
-            }
-            df = pd.concat([df, pd.DataFrame([new_record])])
-            print(df)
-            save_data(df)
-            flash('Record added successfully!', 'success')
-        except KeyError as e:
-            flash(f"Error in form submission: {str(e)}", 'danger')
-            print('error in submission')
-        return redirect(url_for('index'))
+    df = load_data()  # Load existing data
+    
+    data = request.json  # Use JSON data from request
+    
+    if not data:
+        return jsonify({'message': 'No data provided'}), 400
 
-    records = df.to_dict(orient='records')
+    try:
+        new_record = {
+            'Unit': data.get('unit'),
+            'Mine': data.get('mine'),
+            'Project Name': data.get('project_name'),
+            'Contractor': data.get('work_awarded_to'),
+            'LoI/Work awarded Date': data.get('loi_date'),
+            'Work Commencement Date': data.get('work_commencement_date'),
+            'Present Status': data.get('present_status'),
+            'Username': USERNAME,
+            'Date': datetime.now().strftime("%Y-%m-%d")
+        }
 
-    return render_template('form.html', records=records)
+        df = pd.concat([df, pd.DataFrame([new_record])], ignore_index=True)
+        save_data(df)
+        
+        return jsonify({'message': 'Record added successfully!', 'status': 'success'}), 201
+    
+    except KeyError as e:
+        return jsonify({'message': f"Missing field: {str(e)}", 'status': 'error'}), 400
+
+
+# @app.route('/', methods=['GET', 'POST'])
+# def index():
+#     if not session.get('logged_in'):
+#         return redirect(url_for('login'))
+
+#     df = load_data()
+#     if request.method == 'POST':
+#         try:
+#             new_record = {
+#                 'Unit': request.form['unit'],
+#                 'Mine': request.form['mine'],
+#                 'Project Name': request.form['project_name'],
+#                 'Contractor': request.form['work_awarded_to'],
+#                 'LoI/Work awarded Date': request.form['loi_date'],
+#                 'Work Commencement Date': request.form['work_commencement_date'],
+#                 'Present Status': request.form['present_status'],
+#                 'Username': USERNAME,  # Capturing the username from session
+#                 'Date': datetime.now().strftime("%Y-%m-%d")  # Capturing the current date
+#             }
+#             df = pd.concat([df, pd.DataFrame([new_record])])
+#             print(df)
+#             save_data(df)
+#             flash('Record added successfully!', 'success')
+#         except KeyError as e:
+#             flash(f"Error in form submission: {str(e)}", 'danger')
+#             print('error in submission')
+#         return redirect(url_for('index'))
+
+#     records = df.to_dict(orient='records')
+
+#     return render_template('form.html', records=records)
 
 
 # Route for updating a record
