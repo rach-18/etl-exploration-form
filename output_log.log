@@ -59,3 +59,323 @@
 2025-01-31 12:50:26,734 - 192.168.90.87 - - [31/Jan/2025 12:50:26] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
 2025-01-31 12:50:28,657 - 192.168.90.87 - - [31/Jan/2025 12:50:28] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
 2025-01-31 12:50:28,662 - 192.168.90.87 - - [31/Jan/2025 12:50:28] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 12:58:15,774 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 12:58:15,894 -  * Restarting with stat-INFO
+2025-01-31 12:58:16,747 -  * Debugger is active!-WARNING
+2025-01-31 12:58:16,749 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 12:58:45,925 - 192.168.90.87 - - [31/Jan/2025 12:58:45] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 12:58:45,934 - 192.168.90.87 - - [31/Jan/2025 12:58:45] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 12:58:45,962 - 192.168.90.87 - - [31/Jan/2025 12:58:45] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 12:58:45,972 - 192.168.90.87 - - [31/Jan/2025 12:58:45] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:02:06,723 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 13:02:06,798 -  * Restarting with stat-INFO
+2025-01-31 13:02:07,672 -  * Debugger is active!-WARNING
+2025-01-31 13:02:07,675 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 13:02:17,813 - 192.168.90.87 - - [31/Jan/2025 13:02:17] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:02:17,817 - 192.168.90.87 - - [31/Jan/2025 13:02:17] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:02:27,093 - 192.168.90.87 - - [31/Jan/2025 13:02:27] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 13:02:27,101 - 192.168.90.87 - - [31/Jan/2025 13:02:27] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 13:02:27,126 - 192.168.90.87 - - [31/Jan/2025 13:02:27] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:02:27,137 - 192.168.90.87 - - [31/Jan/2025 13:02:27] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:02:54,094 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 13:02:54,162 -  * Restarting with stat-INFO
+2025-01-31 13:03:01,607 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 13:03:01,607 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 13:03:01,608 -  * Restarting with stat-INFO
+2025-01-31 13:03:02,407 -  * Debugger is active!-WARNING
+2025-01-31 13:03:02,409 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 13:03:15,415 - 192.168.90.87 - - [31/Jan/2025 13:03:15] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 13:03:15,423 - 192.168.90.87 - - [31/Jan/2025 13:03:15] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 13:03:15,452 - 192.168.90.87 - - [31/Jan/2025 13:03:15] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 13:03:15,458 - 192.168.90.87 - - [31/Jan/2025 13:03:15] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 14:42:11,071 - 192.168.90.87 - - [31/Jan/2025 14:42:11] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 14:42:11,077 - 192.168.90.87 - - [31/Jan/2025 14:42:11] "[31m[1mGET /fetch-records HTTP/1.1[0m" 401 --INFO
+2025-01-31 14:53:39,813 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 14:53:39,813 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 14:53:39,814 -  * Restarting with stat-INFO
+2025-01-31 14:53:40,631 -  * Debugger is active!-WARNING
+2025-01-31 14:53:40,634 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 14:53:42,702 - 192.168.90.87 - - [31/Jan/2025 14:53:42] "[35m[1mGET / HTTP/1.1[0m" 201 --INFO
+2025-01-31 14:54:27,210 - 192.168.90.87 - - [31/Jan/2025 14:54:27] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 14:54:27,217 - 192.168.90.87 - - [31/Jan/2025 14:54:27] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 14:54:27,247 - 192.168.90.87 - - [31/Jan/2025 14:54:27] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 14:54:27,254 - 192.168.90.87 - - [31/Jan/2025 14:54:27] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:06:03,753 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 16:06:03,753 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 16:06:03,755 -  * Restarting with stat-INFO
+2025-01-31 16:06:04,477 -  * Debugger is active!-WARNING
+2025-01-31 16:06:04,480 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:07:51,144 - 192.168.90.87 - - [31/Jan/2025 16:07:51] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:07:51,151 - 192.168.90.87 - - [31/Jan/2025 16:07:51] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:09:49,489 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:09:49,564 -  * Restarting with stat-INFO
+2025-01-31 16:09:50,325 -  * Debugger is active!-WARNING
+2025-01-31 16:09:50,328 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:10:07,794 - 192.168.90.87 - - [31/Jan/2025 16:10:07] "GET / HTTP/1.1" 200 --INFO
+2025-01-31 16:10:17,963 - 192.168.90.87 - - [31/Jan/2025 16:10:17] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:10:17,970 - 192.168.90.87 - - [31/Jan/2025 16:10:17] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:10:32,350 - 192.168.90.87 - - [31/Jan/2025 16:10:32] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:10:32,358 - 192.168.90.87 - - [31/Jan/2025 16:10:32] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:10:32,386 - 192.168.90.87 - - [31/Jan/2025 16:10:32] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:10:32,395 - 192.168.90.87 - - [31/Jan/2025 16:10:32] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:13:55,553 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:13:55,645 -  * Restarting with stat-INFO
+2025-01-31 16:13:56,388 -  * Debugger is active!-WARNING
+2025-01-31 16:13:56,391 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:00,448 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:00,520 -  * Restarting with stat-INFO
+2025-01-31 16:14:01,275 -  * Debugger is active!-WARNING
+2025-01-31 16:14:01,277 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:07,329 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:07,399 -  * Restarting with stat-INFO
+2025-01-31 16:14:08,149 -  * Debugger is active!-WARNING
+2025-01-31 16:14:08,152 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:21,278 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:21,357 -  * Restarting with stat-INFO
+2025-01-31 16:14:22,155 -  * Debugger is active!-WARNING
+2025-01-31 16:14:22,158 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:24,185 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:24,254 -  * Restarting with stat-INFO
+2025-01-31 16:14:25,016 -  * Debugger is active!-WARNING
+2025-01-31 16:14:25,019 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:28,055 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:28,144 -  * Restarting with stat-INFO
+2025-01-31 16:14:28,907 -  * Debugger is active!-WARNING
+2025-01-31 16:14:28,910 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:29,928 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:30,010 -  * Restarting with stat-INFO
+2025-01-31 16:14:30,762 -  * Debugger is active!-WARNING
+2025-01-31 16:14:30,764 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:33,810 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:33,889 -  * Restarting with stat-INFO
+2025-01-31 16:14:34,608 -  * Debugger is active!-WARNING
+2025-01-31 16:14:34,610 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:40,682 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:14:40,757 -  * Restarting with stat-INFO
+2025-01-31 16:14:41,581 -  * Debugger is active!-WARNING
+2025-01-31 16:14:41,583 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:14:45,972 - 192.168.90.87 - - [31/Jan/2025 16:14:45] "GET / HTTP/1.1" 200 --INFO
+2025-01-31 16:19:54,481 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:19:54,582 -  * Restarting with stat-INFO
+2025-01-31 16:19:55,337 -  * Debugger is active!-WARNING
+2025-01-31 16:19:55,340 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:20:18,605 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:20:18,676 -  * Restarting with stat-INFO
+2025-01-31 16:20:19,418 -  * Debugger is active!-WARNING
+2025-01-31 16:20:19,421 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:20:21,452 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:20:21,524 -  * Restarting with stat-INFO
+2025-01-31 16:20:37,971 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 16:20:37,972 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 16:20:37,973 -  * Restarting with stat-INFO
+2025-01-31 16:20:38,741 -  * Debugger is active!-WARNING
+2025-01-31 16:20:38,745 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:22:10,611 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:22:10,689 -  * Restarting with stat-INFO
+2025-01-31 16:22:11,471 -  * Debugger is active!-WARNING
+2025-01-31 16:22:11,474 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:22:16,537 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:22:16,651 -  * Restarting with stat-INFO
+2025-01-31 16:22:17,404 -  * Debugger is active!-WARNING
+2025-01-31 16:22:17,407 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:22:32,959 - 192.168.90.87 - - [31/Jan/2025 16:22:32] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:22:32,970 - 192.168.90.87 - - [31/Jan/2025 16:22:32] "[35m[1mPOST /login HTTP/1.1[0m" 500 --INFO
+2025-01-31 16:23:05,898 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:23:05,969 -  * Restarting with stat-INFO
+2025-01-31 16:23:06,717 -  * Debugger is active!-WARNING
+2025-01-31 16:23:06,720 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:23:08,757 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:23:08,837 -  * Restarting with stat-INFO
+2025-01-31 16:23:09,588 -  * Debugger is active!-WARNING
+2025-01-31 16:23:09,590 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:23:18,196 - 192.168.90.87 - - [31/Jan/2025 16:23:18] "[35m[1mPOST /login HTTP/1.1[0m" 500 --INFO
+2025-01-31 16:23:27,847 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:23:27,925 -  * Restarting with stat-INFO
+2025-01-31 16:23:28,933 -  * Debugger is active!-WARNING
+2025-01-31 16:23:28,936 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:23:30,480 - 192.168.90.87 - - [31/Jan/2025 16:23:30] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:23:36,110 - 192.168.90.87 - - [31/Jan/2025 16:23:36] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:23:36,116 - 192.168.90.87 - - [31/Jan/2025 16:23:36] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:23:36,196 - 192.168.90.87 - - [31/Jan/2025 16:23:36] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:23:36,210 - 192.168.90.87 - - [31/Jan/2025 16:23:36] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:23:44,312 - 192.168.90.87 - - [31/Jan/2025 16:23:44] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:23:44,321 - 192.168.90.87 - - [31/Jan/2025 16:23:44] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:32:34,943 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:32:35,022 -  * Restarting with stat-INFO
+2025-01-31 16:32:35,820 -  * Debugger is active!-WARNING
+2025-01-31 16:32:35,822 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:33:50,523 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:33:50,597 -  * Restarting with stat-INFO
+2025-01-31 16:33:51,329 -  * Debugger is active!-WARNING
+2025-01-31 16:33:51,332 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:33:59,410 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:33:59,490 -  * Restarting with stat-INFO
+2025-01-31 16:34:00,262 -  * Debugger is active!-WARNING
+2025-01-31 16:34:00,265 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:34:08,710 - 192.168.90.87 - - [31/Jan/2025 16:34:08] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:34:08,728 - 192.168.90.87 - - [31/Jan/2025 16:34:08] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:34:15,589 - 192.168.90.87 - - [31/Jan/2025 16:34:15] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:34:15,598 - 192.168.90.87 - - [31/Jan/2025 16:34:15] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:34:15,628 - 192.168.90.87 - - [31/Jan/2025 16:34:15] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:34:15,637 - 192.168.90.87 - - [31/Jan/2025 16:34:15] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:35:24,000 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:35:24,072 -  * Restarting with stat-INFO
+2025-01-31 16:35:24,881 -  * Debugger is active!-WARNING
+2025-01-31 16:35:24,884 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:35:26,908 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:35:26,984 -  * Restarting with stat-INFO
+2025-01-31 16:35:27,757 -  * Debugger is active!-WARNING
+2025-01-31 16:35:27,760 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:35:49,984 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:35:50,064 -  * Restarting with stat-INFO
+2025-01-31 16:35:50,798 -  * Debugger is active!-WARNING
+2025-01-31 16:35:50,800 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:35:51,821 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:35:51,894 -  * Restarting with stat-INFO
+2025-01-31 16:35:52,754 -  * Debugger is active!-WARNING
+2025-01-31 16:35:52,758 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:36:05,277 - 192.168.90.87 - - [31/Jan/2025 16:36:05] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:36:05,284 - 192.168.90.87 - - [31/Jan/2025 16:36:05] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:36:05,314 - 192.168.90.87 - - [31/Jan/2025 16:36:05] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:36:05,328 - 192.168.90.87 - - [31/Jan/2025 16:36:05] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:37:33,982 - 192.168.90.87 - - [31/Jan/2025 16:37:33] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:37:34,975 - 192.168.90.87 - - [31/Jan/2025 16:37:34] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:37:35,969 - 192.168.90.87 - - [31/Jan/2025 16:37:35] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:37:50,974 - 192.168.90.87 - - [31/Jan/2025 16:37:50] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:37:54,994 - 192.168.90.87 - - [31/Jan/2025 16:37:54] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:07,981 - 192.168.90.87 - - [31/Jan/2025 16:38:07] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:09,972 - 192.168.90.87 - - [31/Jan/2025 16:38:09] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:15,984 - 192.168.90.87 - - [31/Jan/2025 16:38:15] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:19,977 - 192.168.90.87 - - [31/Jan/2025 16:38:19] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:21,977 - 192.168.90.87 - - [31/Jan/2025 16:38:21] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:32,747 - 192.168.90.87 - - [31/Jan/2025 16:38:32] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:38:32,771 - 192.168.90.87 - - [31/Jan/2025 16:38:32] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:39:04,475 - 192.168.90.87 - - [31/Jan/2025 16:39:04] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 16:39:04,483 - 192.168.90.87 - - [31/Jan/2025 16:39:04] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:39:04,505 - 192.168.90.87 - - [31/Jan/2025 16:39:04] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:39:04,515 - 192.168.90.87 - - [31/Jan/2025 16:39:04] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:47:39,286 - 192.168.90.87 - - [31/Jan/2025 16:47:39] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:47:40,347 - 192.168.90.87 - - [31/Jan/2025 16:47:40] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:47:40,367 - 192.168.90.87 - - [31/Jan/2025 16:47:40] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:05,764 - 127.0.0.1 - - [31/Jan/2025 16:48:05] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:09,078 - 127.0.0.1 - - [31/Jan/2025 16:48:09] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:09,083 - 127.0.0.1 - - [31/Jan/2025 16:48:09] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:20,467 - 127.0.0.1 - - [31/Jan/2025 16:48:20] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:22,646 - 127.0.0.1 - - [31/Jan/2025 16:48:22] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:48:22,965 - 127.0.0.1 - - [31/Jan/2025 16:48:22] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 16:55:58,305 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:55:58,378 -  * Restarting with stat-INFO
+2025-01-31 16:55:59,199 -  * Debugger is active!-WARNING
+2025-01-31 16:55:59,202 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:56:04,263 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:56:04,351 -  * Restarting with stat-INFO
+2025-01-31 16:56:05,108 -  * Debugger is active!-WARNING
+2025-01-31 16:56:05,111 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:56:12,320 - 192.168.90.87 - - [31/Jan/2025 16:56:12] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 16:57:23,833 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 16:57:23,905 -  * Restarting with stat-INFO
+2025-01-31 16:57:24,704 -  * Debugger is active!-WARNING
+2025-01-31 16:57:24,706 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 16:57:47,410 - 192.168.90.87 - - [31/Jan/2025 16:57:47] "GET / HTTP/1.1" 200 --INFO
+2025-01-31 17:03:43,030 - 192.168.90.87 - - [31/Jan/2025 17:03:43] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 17:03:43,042 - 192.168.90.87 - - [31/Jan/2025 17:03:43] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 17:03:43,385 - 127.0.0.1 - - [31/Jan/2025 17:03:43] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:03:43,643 - 127.0.0.1 - - [31/Jan/2025 17:03:43] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:22:01,300 - 127.0.0.1 - - [31/Jan/2025 17:22:01] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:22:12,128 - 127.0.0.1 - - [31/Jan/2025 17:22:12] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:22:12,444 - 127.0.0.1 - - [31/Jan/2025 17:22:12] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:23:10,905 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:23:11,003 -  * Restarting with stat-INFO
+2025-01-31 17:28:41,244 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 17:28:41,245 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 17:28:41,246 -  * Restarting with stat-INFO
+2025-01-31 17:28:42,052 -  * Debugger is active!-WARNING
+2025-01-31 17:28:42,056 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:28:58,749 - 192.168.90.87 - - [31/Jan/2025 17:28:58] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 17:28:58,757 - 192.168.90.87 - - [31/Jan/2025 17:28:58] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 17:28:59,094 - 127.0.0.1 - - [31/Jan/2025 17:28:59] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:28:59,352 - 127.0.0.1 - - [31/Jan/2025 17:28:59] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:32:28,300 - 127.0.0.1 - - [31/Jan/2025 17:32:28] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:32:38,156 - 127.0.0.1 - - [31/Jan/2025 17:32:38] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:32:38,476 - 127.0.0.1 - - [31/Jan/2025 17:32:38] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:38:37,100 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:38:37,184 -  * Restarting with stat-INFO
+2025-01-31 17:38:37,983 -  * Debugger is active!-WARNING
+2025-01-31 17:38:37,986 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:38:50,123 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:38:50,199 -  * Restarting with stat-INFO
+2025-01-31 17:38:50,978 -  * Debugger is active!-WARNING
+2025-01-31 17:38:50,981 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:39:58,534 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:39:58,610 -  * Restarting with stat-INFO
+2025-01-31 17:39:59,387 -  * Debugger is active!-WARNING
+2025-01-31 17:39:59,390 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:40:07,463 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:40:07,557 -  * Restarting with stat-INFO
+2025-01-31 17:40:08,356 -  * Debugger is active!-WARNING
+2025-01-31 17:40:08,358 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:40:45,742 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 17:40:45,742 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 17:40:45,744 -  * Restarting with stat-INFO
+2025-01-31 17:40:46,709 -  * Debugger is active!-WARNING
+2025-01-31 17:40:46,714 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:40:48,961 - 127.0.0.1 - - [31/Jan/2025 17:40:48] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:40:49,230 - 127.0.0.1 - - [31/Jan/2025 17:40:49] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:41:00,452 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 17:41:00,453 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 17:41:00,454 -  * Restarting with stat-INFO
+2025-01-31 17:41:01,317 -  * Debugger is active!-WARNING
+2025-01-31 17:41:01,320 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:41:11,115 - 192.168.90.87 - - [31/Jan/2025 17:41:11] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 17:41:11,122 - 192.168.90.87 - - [31/Jan/2025 17:41:11] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 17:41:11,471 - 127.0.0.1 - - [31/Jan/2025 17:41:11] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:41:11,716 - 127.0.0.1 - - [31/Jan/2025 17:41:11] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:47:01,824 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 17:47:01,825 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 17:47:01,826 -  * Restarting with stat-INFO
+2025-01-31 17:47:02,818 -  * Debugger is active!-WARNING
+2025-01-31 17:47:02,823 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:47:09,181 - 192.168.90.87 - - [31/Jan/2025 17:47:09] "OPTIONS /login HTTP/1.1" 200 --INFO
+2025-01-31 17:47:09,190 - 192.168.90.87 - - [31/Jan/2025 17:47:09] "POST /login HTTP/1.1" 200 --INFO
+2025-01-31 17:47:09,530 - 127.0.0.1 - - [31/Jan/2025 17:47:09] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:47:09,778 - 127.0.0.1 - - [31/Jan/2025 17:47:09] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:51:37,373 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:51:37,444 -  * Restarting with stat-INFO
+2025-01-31 17:52:20,245 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://192.168.90.87:7000-INFO
+2025-01-31 17:52:20,245 - [33mPress CTRL+C to quit[0m-INFO
+2025-01-31 17:52:20,247 -  * Restarting with stat-INFO
+2025-01-31 17:52:20,994 -  * Debugger is active!-WARNING
+2025-01-31 17:52:20,997 -  * Debugger PIN: 438-781-186-INFO
+2025-01-31 17:52:23,596 - 192.168.90.87 - - [31/Jan/2025 17:52:23] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:52:23,601 - 192.168.90.87 - - [31/Jan/2025 17:52:23] "[31m[1mGET / HTTP/1.1[0m" 401 --INFO
+2025-01-31 17:53:28,593 -  * Detected change in 'C:\\Users\\user\\OneDrive\\Documents\\ETL-form\\app.py', reloading-INFO
+2025-01-31 17:53:28,673 -  * Restarting with stat-INFO
+2025-01-31 17:53:29,432 -  * Debugger is active!-WARNING
+2025-01-31 17:53:29,435 -  * Debugger PIN: 438-781-186-INFO

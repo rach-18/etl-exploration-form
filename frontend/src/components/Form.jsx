@@ -35,11 +35,11 @@ function Form() {
   useEffect(() => {
     const fetchRecords = async() => {
       try {
-        const response = await axios.get('http://192.168.90.87:7000/fetch-records', {withCredentials: true});
+        const response = await axios.get('http://192.168.90.87:7000', {withCredentials: true});
         console.log(response)
       }
       catch(err) {
-        console.log(err);
+        console.log(err.response?.data || err.message);
       }
     }
 

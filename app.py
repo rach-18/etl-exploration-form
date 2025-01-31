@@ -8,9 +8,9 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
+CORS(app, supports_credentials=True, origins=["*"])
 
-app.config["SESSION_PERMANENT"] = True
+app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_REFRESH_EACH_REQUEST"] = True  # 🔥 Forces Flask to refresh session on every request
 
 app.config["SESSION_TYPE"] = "filesystem"
@@ -20,9 +20,10 @@ app.config["SESSION_USE_SIGNER"] = True  # Signs the session cookie for security
 # app.config["SESSION_COOKIE_SECURE"] = False  # 🔥 Required for cross-origin SameSite=None cookies
 # app.config["SESSION_COOKIE_SAMESITE"] = "None"  # 🔥 Required for cross-origin cookies
 
+app.config["SESSION_COOKIE_SAMESITE"] = "None"  # 🔥 Allows cookies on same-site requests
 app.config["SESSION_COOKIE_SECURE"] = False  # 🔥 Only use True for HTTPS
-app.config["SESSION_COOKIE_SAMESITE"] = "Lax"  # 🔥 Allows cookies on same-site requests
 app.config["SESSION_COOKIE_HTTPONLY"] = True  # Prevents JavaScript access (Security)
+app.config['SECRET_KEY'] = 'supersecretkey'
 
 
 Session(app)
@@ -92,9 +93,15 @@ def save_data(df):
     except Exception as e:
         print(f"Error saving data: {e}")
 
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'  # Your React app URL
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+    return response
 
 # Route for the login page
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     username = data.get('username')
@@ -102,57 +109,84 @@ def login():
 
     if username == USERNAME and password == PASSWORD:
         session['logged_in'] = True
-        print('First:', session.get('logged_in'))
         session.modified = True
-        print('Second:', session.get('logged_in'))
-        return jsonify({"success": True, "message": "Login successful!"}), 200
-    else:
-        return jsonify({"success": False, "message": "Invalid credentials, please try again."}), 401
+        session.permanent = True
+        print('Session after login:', session.items())
+        # print('First:', session.get('logged_in'))
+        # print('Second:', session.get('logged_in'))
+
+        # Create response
+        response = jsonify({"success": True, "message": "Login successful!"})
+        response = add_cors_headers(response)
+
+        # Set headers to allow credentials
+        response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'  # Change this to your frontend URL
+        response.headers['Access-Control-Allow-Credentials'] = 'true'
+        
+        return response, 200
+
+    return jsonify({"success": False, "message": "Invalid credentials, please try again."}), 401
+
 
 # Route for displaying the form and list of records
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    print('Fetching...')
+    print('Session contents:', session.items())
+
     if not session.get('logged_in'):
-        return jsonify({'message': 'Unauthorized'}), 401
+        print('You are unauthorized')
+        print(session.get('logged_in'))
+        response = jsonify({'error': 'Unauthorized'})
+        response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'  # Change to your frontend URL
+        response.headers['Access-Control-Allow-Credentials'] = 'true'
+        return response, 401
 
-    df = load_data()  # Load existing data
-    
-    data = request.json  # Use JSON data from request
-    
-    if not data:
-        return jsonify({'message': 'No data provided'}), 400
-
-    try:
-        new_record = {
-            'Unit': data.get('unit'),
-            'Mine': data.get('mine'),
-            'Project Name': data.get('project_name'),
-            'Contractor': data.get('work_awarded_to'),
-            'LoI/Work awarded Date': data.get('loi_date'),
-            'Work Commencement Date': data.get('work_commencement_date'),
-            'Present Status': data.get('present_status'),
-            'Username': USERNAME,
-            'Date': datetime.now().strftime("%Y-%m-%d")
-        }
-
-        df = pd.concat([df, pd.DataFrame([new_record])], ignore_index=True)
-        save_data(df)
-        
-        return jsonify({'message': 'Record added successfully!', 'status': 'success'}), 201
-    
-    except KeyError as e:
-        return jsonify({'message': f"Missing field: {str(e)}", 'status': 'error'}), 400
-
-@app.route('/fetch-records', methods = ['GET'])
-def fetchRecords():
-    print(session.get('logged_in'))
-    if not session.get('logged_in'):
-        return jsonify({'message': 'Unauthorized'}), 401
-    
     df = load_data()
 
-    df_dict = df.to_dict(orient='records')  # Converts each row to a dictionary
-    return jsonify(df_dict)  # Send JSON response
+    if request.method == 'POST':
+        try:
+            data = request.json  # Expect JSON request body
+            new_record = {
+                'Unit': data['unit'],
+                'Mine': data['mine'],
+                'Project Name': data['project_name'],
+                'Contractor': data['work_awarded_to'],
+                'LoI/Work awarded Date': data['loi_date'],
+                'Work Commencement Date': data['work_commencement_date'],
+                'Present Status': data['present_status'],
+                'Username': USERNAME,
+                'Date': datetime.now().strftime("%Y-%m-%d")
+            }
+            df = pd.concat([df, pd.DataFrame([new_record])])
+            save_data(df)
+
+            response = jsonify({'message': 'Record added successfully!'})
+            response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
+            return response, 201
+        except KeyError as e:
+            response = jsonify({'error': f"Missing field: {str(e)}"})
+            response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
+            return response, 400
+
+    records = df.to_dict(orient='records')
+    response = jsonify(records)
+    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5173'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
+    return add_cors_headers(response)
+
+# @app.route('/fetch-records', methods = ['GET'])
+# def fetchRecords():
+#     print(session.get('logged_in'))
+#     if not session.get('logged_in'):
+#         return jsonify({'message': 'Unauthorized'}), 401
+    
+#     df = load_data()
+
+#     df_dict = df.to_dict(orient='records')  # Converts each row to a dictionary
+#     return jsonify(df_dict)  # Send JSON response
 
 
 # @app.route('/', methods=['GET', 'POST'])
