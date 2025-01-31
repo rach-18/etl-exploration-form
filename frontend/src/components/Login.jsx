@@ -17,7 +17,7 @@ function Login() {
       setMessage('Please fill in all fields.');
     } else {
       try {
-        const response = await axios.post("http://192.168.90.87:7000/login", {username, password});
+        const response = await axios.post("http://192.168.90.87:7000/login", {username, password}, {withCredentials: true});
 
         if(response.data.success) {
             // setMessage('Login successfull')

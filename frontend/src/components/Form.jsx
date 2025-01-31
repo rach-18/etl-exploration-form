@@ -11,25 +11,40 @@ function Form() {
   const [presentStatus, setPresentStatus] = useState('');
   const [records, setRecords] = useState([]);
 
-  useEffect(() => {
-    const fetchRecords = async () => {
-      try {
-        const response = await fetch('http://192.168.90.87:7000/');
-        const data = await response.json();
-        console.log("Fetched Data:", data); // Debugging: Check the API response
-        if (Array.isArray(data)) {
-          setRecords(data);
-        } else {
-          setRecords([]); // Ensure it's an array to prevent .map() errors
-        }
-      } catch (error) {
-        console.error("Error fetching records:", error);
-        setRecords([]); // Prevent crashes
-      }
-    };
+  // useEffect(() => {
+  //   const fetchRecords = async () => {
+  //     try {
+  //       const response = await fetch('http://192.168.90.87:7000/fetch-records');
+  //       // const data = await response.json();
+  //       console.log("Fetched Data:", response); // Debugging: Check the API response
+  //       // console.log("Token:", data.data.token)
+  //       if (Array.isArray(data)) {
+  //         setRecords(data);
+  //       } else {
+  //         setRecords([]); // Ensure it's an array to prevent .map() errors
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching records:", error);
+  //       setRecords([]); // Prevent crashes
+  //     }
+  //   };
   
-    fetchRecords();
-  }, []);
+  //   fetchRecords();
+  // }, []);
+
+  useEffect(() => {
+    const fetchRecords = async() => {
+      try {
+        const response = await axios.get('http://192.168.90.87:7000/fetch-records', {withCredentials: true});
+        console.log(response)
+      }
+      catch(err) {
+        console.log(err);
+      }
+    }
+
+    fetchRecords()
+  }, [])
   
 
   const handleSubmit = async (e) => {

@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
+import sqlite3, logging, bcrypt, string, secrets
+from flask_session import Session
 import pandas as pd
 from datetime import datetime
 import os
@@ -6,7 +8,27 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
-CORS(app)
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
+
+app.config["SESSION_PERMANENT"] = True
+app.config["SESSION_REFRESH_EACH_REQUEST"] = True  # 🔥 Forces Flask to refresh session on every request
+
+app.config["SESSION_TYPE"] = "filesystem"
+app.config["SESSION_FILE_DIR"] = "./flask_session"  # Ensure this folder exists
+app.config["SESSION_USE_SIGNER"] = True  # Signs the session cookie for security
+# app.config["SESSION_COOKIE_HTTPONLY"] = True  # Restrict JavaScript access
+# app.config["SESSION_COOKIE_SECURE"] = False  # 🔥 Required for cross-origin SameSite=None cookies
+# app.config["SESSION_COOKIE_SAMESITE"] = "None"  # 🔥 Required for cross-origin cookies
+
+app.config["SESSION_COOKIE_SECURE"] = False  # 🔥 Only use True for HTTPS
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"  # 🔥 Allows cookies on same-site requests
+app.config["SESSION_COOKIE_HTTPONLY"] = True  # Prevents JavaScript access (Security)
+
+
+Session(app)
+
+logging.basicConfig(filename="output_log.log", format="%(asctime)s - %(message)s-%(levelname)s" , level=logging.DEBUG)
+
 
 # File path for the Excel file
 file_path = 'records.xlsx'
@@ -72,18 +94,6 @@ def save_data(df):
 
 
 # Route for the login page
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         username = request.form['username']
-#         password = request.form['password']
-
-#         if username == USERNAME and password == PASSWORD:
-#             session['logged_in'] = True
-#             return redirect(url_for('index'))
-#         else:
-#             flash('Invalid credentials, please try again.', 'danger')
-#     return render_template('login.html')
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     data = request.get_json()
@@ -92,6 +102,9 @@ def login():
 
     if username == USERNAME and password == PASSWORD:
         session['logged_in'] = True
+        print('First:', session.get('logged_in'))
+        session.modified = True
+        print('Second:', session.get('logged_in'))
         return jsonify({"success": True, "message": "Login successful!"}), 200
     else:
         return jsonify({"success": False, "message": "Invalid credentials, please try again."}), 401
@@ -129,6 +142,17 @@ def index():
     
     except KeyError as e:
         return jsonify({'message': f"Missing field: {str(e)}", 'status': 'error'}), 400
+
+@app.route('/fetch-records', methods = ['GET'])
+def fetchRecords():
+    print(session.get('logged_in'))
+    if not session.get('logged_in'):
+        return jsonify({'message': 'Unauthorized'}), 401
+    
+    df = load_data()
+
+    df_dict = df.to_dict(orient='records')  # Converts each row to a dictionary
+    return jsonify(df_dict)  # Send JSON response
 
 
 # @app.route('/', methods=['GET', 'POST'])
